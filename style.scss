@@ -94,7 +94,13 @@ header{
 
     .nav-link{
         z-index: 1001;
+        li{
+            a{
+                cursor: pointer;
+            }
+        }
     }
+    
 
     .nav-item{
         margin-top: 4rem;
@@ -104,8 +110,8 @@ header{
     .close{
         cursor: pointer;
         position: absolute;
-        top: 2%;
-        right: 12%;
+        top: 3%;
+        right: 23%;
         font-size: 2.1rem;
         
         
@@ -215,6 +221,15 @@ nav{
         position: relative;
         z-index: 3;
 
+        button{
+            transition: 350ms ease-in-out;
+        }
+
+        button:hover{
+            box-shadow: 0px 15px 21px 0px rgba(0, 0, 0, 0.295);
+            transform: translateY(3px);
+        }
+
         a{
             color: white;
         }
@@ -272,7 +287,7 @@ nav{
 
 .space-activities{
     width: 100%;
-    min-height: 100%;
+    max-height: 80%;
     position: relative;
     z-index: 5;
     
@@ -280,6 +295,28 @@ nav{
     .space-container{
         width: 100%;
         height: 100%;
+
+        .read-review{
+            // margin-bottom: 2rem;
+            margin-top: 3rem;
+            p{
+                font-size: 3rem;
+            }
+
+            button{
+                // background: rgba(135, 91, 255, 0.5);
+                border: 3px solid black;
+                border-radius: 30px;
+                padding: 1rem 5rem;
+                margin-top: 1.5rem;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: rgba(38, 0, 255, 0.5);
+                color: white;
+            }
+        }
         
         .title-heading{
             margin-top: -.5rem;
@@ -401,6 +438,33 @@ nav{
     height: 70%;
     position: relative;
 
+    .users{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 20rem;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        img{
+            margin-left: 1.7rem;
+        }
+
+        .user-pic{
+            display: flex;
+            flex-direction: column;
+            margin-left: 15rem;
+            margin-right: 15rem;
+
+            .review-star{
+                margin-top: -4rem;
+                i{
+                    color: rgb(219, 187, 3);
+                }
+            }
+        }
+    }
+
     .button-top{
         position: fixed;
         z-index: 70;
@@ -443,7 +507,7 @@ nav{
         min-width: 100%;
         text-align: center;
         margin-top: 2rem;
-        background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/hiking.png");
+        background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/review-bg.jpg");
         background-position: center no-repeat;
         background-size: cover;
         color: white;
@@ -548,6 +612,8 @@ nav{
         right: -100rem;
         font-size: 3.5rem;
         width: 25%;
+        font-family: inherit;
+        border-bottom: 1px solid orangered;
         
         .nav-item{
             margin-top: 10rem;
@@ -697,7 +763,7 @@ nav{
         content: '';
         position: absolute;
         width: 100%;
-        height: 18%;
+        height: 19%;
         background: url(img/wave-large.png), center no-repeat;
         background-size: cover;
     }
@@ -712,7 +778,7 @@ nav{
     .read-review{
         // display: flex;
         // flex-direction: column;
-        margin-top: 15rem;
+        // margin-top: 5rem;
 
         
     }
@@ -798,12 +864,12 @@ nav{
     content: '';
     position: absolute;
     width: 100%;
-    height: 37%;
+    height: 29%;
     border-bottom: none;
     background-color: red;
     background: url(img/wave-large-reversed.png), center no-repeat;
     background-size: cover;
-    top: -15%;
+    top:2%;
     left: 0%;
     z-index: 30;
 }
@@ -815,7 +881,47 @@ nav{
     z-index: 1;
     // .review-container{
     //     display: flex;
-    // }
+    // }    .button-top{
+
+    .button-top{
+        position: fixed;
+        z-index: 70;
+        bottom: 9%;
+        right:2.7%;
+        border: none;
+        outline: none;
+        // // paddding: 10px;
+        // background-color: red;
+        // height: 30px;
+        // border-radius: 50%;
+        // background-color: rgba(126, 126, 126, 0.3);
+        z-index: 45;
+        transition: 650ms ease-in-out;
+        i{
+            color:rgb(0, 204, 204) ;
+
+        }
+        i:hover{
+            cursor: pointer;
+        }
+    }
+
+    .button-top::before{
+        content: '';
+        width: 3%;
+        height: 5%;
+        border-radius:3px;
+        background-color: rgba(0,0,0,0.1);
+        position: fixed;
+        right: 2%;
+        bottom: 8%;
+        z-index: 30;
+        
+    }
+}
+.review-container{
+    margin-top:-5rem;
+    padding: 0;
 }
 
 
