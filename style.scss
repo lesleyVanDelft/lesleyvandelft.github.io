@@ -1,0 +1,550 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ //global 
+html{
+    height: 100%;
+    font-size: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    height: 100%;
+    background-color:#fff;
+
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: 16px;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    border-bottom: 1px solid rgba(248, 246, 246, 0.5);
+
+    .main-message{
+        p{
+            font-size: 15rem;
+        }
+    }
+}
+
+//container
+
+
+.container{
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    .btn-top{
+
+        position: fixed;
+        bottom:0;
+        right:0;
+    }
+}
+
+//nav list
+.nav-list{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: -50rem;
+    font-size: 1.5rem;
+    background-color: rgba(11, 1, 100, 1);
+    height: 100%;
+    width: 50%;
+    color: white;
+    padding-top: 2rem;
+    transition: 650ms ease-in-out;
+    z-index: 99;
+    font-weight: bold;
+
+    .fa-star{
+        font-size: 5rem;
+        color: gold
+    }
+
+    .nav-link{
+        z-index: 1001;
+    }
+
+    .nav-item{
+        margin-top: 4rem;
+        text-transform: uppercase;
+    }
+
+    .close{
+        position: absolute;
+        top: 2%;
+        right: 12%;
+        font-size: 2.1rem;
+        
+        
+    }
+    
+    
+}
+
+.nav-list.active{
+   right: 0;
+   z-index: 100;
+   opacity: 0.9;
+    // transition: 650ms ease-in-out;
+}
+
+
+
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    // background-color: rgb(162, 0, 255);
+    
+    .nav-logo{
+        font-size: 3rem;
+        color: white;
+        i{
+            margin-top: 1rem;
+            color: rgb(0, 238, 255);
+            margin-top: 1rem;
+            margin-left: .3rem;
+            cursor: pointer;
+        }
+
+        .nav-logo-text{
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            
+            h5{
+                // background-color: #abe9cd;
+                // background: linear-gradient(315deg, #abe9cd , #3eadcf);
+                background-clip: text;
+            }
+        }
+    }
+
+    .open{
+        position: absolute;
+        top: 26.2%;
+        right: 0.2%;
+        i{
+            font-size: 2.3rem;
+            color: white;
+        }
+
+        i:active{
+            color: rgb(154, 100, 255);
+        }
+    }
+
+}
+
+
+.hero{
+    min-height: 80vh;
+    width: 100%;
+    // background: rgb(87,26,255);
+    // background: linear-gradient(50deg, rgba(87,26,255,0.9) 0%, rgba(94,89,145,0.01) 100%), url("img/stars.jpg");
+    // background-position: center no-repeat;
+    // background-size: cover;
+    position: relative;
+    z-index: 2;
+
+    
+
+    .hero-container{
+        min-height: 90vh;
+        border-bottom: none;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        background: rgb(87,26,255);
+        background: linear-gradient(50deg, rgba(87,26,255,0.9) 0%, rgba(94,89,145,0.01) 100%), url("img/stars.jpg");
+        background-position: center no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 3;
+
+        a{
+            color: white;
+        }
+        
+        .main-message{
+            // margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            
+            h1{
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                text-shadow: .5px .5px black;
+                
+                font-size: 2.5rem;
+                border-bottom: 1px  rgba(211, 117, 211, .8);
+                
+            }
+
+            h3{
+                font-size: 1.8rem;
+                text-shadow: .5px .5px black;
+                margin-top: 6.5rem;
+                margin-bottom: -.5rem;
+                border-bottom: 2px solid rgba(180, 164, 252, 0.3);
+                padding-bottom: 1rem;
+            }
+
+            p{
+                margin-top: .8rem;
+            }
+
+            p:last-of-type{
+                margin-top: 3.4rem;
+                font-weight: bold;
+            }
+
+            .cta{
+                margin-top: 3rem;
+                font-size: 2rem;
+                position: absolute;
+                bottom: 100px;
+                left: 50px;
+                cursor: pointer;
+                
+                .btn{
+                    display: inline-block;
+                    padding: 1.4rem 6rem;
+                    background-color: rgba(161, 226, 252, 0.6); 
+                    // (211, 117, 211, .8)
+                    border-radius: 10px;
+                    
+                }
+
+                .btn:hover{
+                    outline: none;
+                    border: none;
+                    // background-color: rgb(167, 96, 167);
+                    // background-color: rgba(107, 207, 247, 0.8);
+                    background-color: rgba(87, 169, 201, 0.6);
+                    color: white;
+                }
+            }
+
+            
+        }
+    }
+
+    .hero-container::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        border-bottom: none;
+        background: url(img/wave-small.png), center no-repeat;
+        background-size: cover;
+        left: 0;
+        bottom: -0.3%;
+        z-index: 4;
+    }
+}
+
+
+
+.space-activities{
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    z-index: 5;
+    
+
+    .space-container{
+        width: 100%;
+        height: 100%;
+        
+        .title-heading{
+            margin-top: -.5rem;
+            text-align: center;
+
+            p{
+                margin-bottom: 1.2rem;
+            }
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                margin-top: -.8rem;
+            }
+
+            h3{
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+
+    // .space-container-grid::before{
+    //     content: '';
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 10%;
+    //     border-bottom: none;
+    //     background: url(img/wave-small-reversed.png), center no-repeat;
+    //     background-size: cover;
+    //     left: 0;
+    //     bottom: -0.3%;
+    //     z-index: 4;
+    // }
+
+    .space-container-grid{
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 8.5px;
+    }
+
+    // .activities-grid-item::before{
+    //     content: '';
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 10%;
+    //     border-bottom: none;
+    //     background: url(img/wave-small-reversed.png), center no-repeat;
+    //     background-size: cover;
+        
+    //     left: 0;
+    //     bottom: 0;
+        
+    //     z-index: 4;
+    // }
+    
+    .activities-grid-item{
+        background: rgb(87,26,255);
+        background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/stars.jpg");
+        text-align: center;
+        h1{
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            margin-top: .5rem;
+        }
+        p{
+            text-align: center;
+            margin-top: .5rem;
+            padding: 0 2rem 1.6rem 3rem;
+            color: white;
+            line-height: 1.6;
+        }
+        
+
+        &.star-gazing{
+            background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/spiralstars.jpg");
+            background-position: center no-repeat;
+            background-size: cover;
+            text-align: center;
+
+            i{
+                font-size: 2.5rem;
+                margin-top: 1rem;
+                margin-bottom: .5rem;
+                color: rgb(0, 255, 234);
+            }
+        }
+
+        &.aurora-borealis{
+            background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/aurora.png");
+            background-position: center no-repeat;
+            background-size: cover;
+            text-align: center;
+
+            i{
+                font-size: 2.5rem;
+                margin-top: 1rem;
+                margin-bottom: .5rem;
+                color: rgb(0, 255, 234);
+            }
+            
+            img {
+                position: absolute;
+                
+                max-width: 50%;
+            }
+
+
+            
+        }
+
+        &.observatory{
+            
+            background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/observe.png");
+            background-position: center no-repeat;
+            background-size: cover;
+
+            i{
+                font-size: 2.5rem;
+                margin-top: 1rem;
+                margin-bottom: .5rem;
+
+                color: rgb(0, 255, 234);
+            }
+        }
+
+        &.night-hiking{
+            background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/hiking.png");
+            background-position: center no-repeat;
+            background-size: cover;
+
+            i{
+                font-size: 2.5rem;
+                margin-top: 1rem;
+                margin-bottom: .5rem;
+                color: rgb(0, 255, 234);
+            }
+        }
+
+        
+
+    }
+}
+
+.user-review{
+    width: 100%;
+    height: 70%;
+    position: relative;
+
+    .button-top{
+        position: fixed;
+        z-index: 70;
+        bottom: 4%;
+        right: 3%;
+        border: none;
+        outline: none;
+        // // paddding: 10px;
+        // background-color: red;
+        // height: 30px;
+        // border-radius: 50%;
+        // background-color: rgba(126, 126, 126, 0.3);
+        z-index: 45;
+        transition: 650ms ease-in-out;
+        i{
+            color:rgb(0, 204, 204) ;
+            // padding: 10px;
+        }
+        i:hover{
+            cursor: pointer;
+        }
+    }
+
+    .button-top::before{
+        content: '';
+        width: 10%;
+        height: 5%;
+        border-radius:3px;
+        background-color: rgba(0,0,0,0.1);
+        position: fixed;
+        right: 2%;
+        bottom: 4%;
+        z-index: 30;
+
+
+    }
+
+    .review-container{
+        min-height: 100%;
+        min-width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+        background: linear-gradient(50deg, rgba(87,26,255,0.9) 30%, rgba(94,89,145,0.01) 100%), url("img/hiking.png");
+        background-position: center no-repeat;
+        background-size: cover;
+        color: white;
+        
+        
+        
+        .review-stars{
+            position: absolute;
+            bottom: 11%;
+            
+            left: 36%;
+            i{
+                font-size: 1.3rem;
+                color: rgb(255, 187, 0);
+            }
+        }
+
+        .user-pic{
+            margin-top: 1rem;
+            // border-radius: 100%;
+            img{
+                object-fit: cover;
+                max-width: 150px;
+                max-height: 150px;
+                border-radius: 100%;
+                margin-bottom: 1rem;
+                
+            }
+
+        }   
+    }
+
+        i{
+            margin-top:5rem;
+            font-size: 3rem;
+            color: rgba(36, 47, 197, 0.541);
+        }
+
+        .user-quote{
+            p{
+                padding: 1rem 1rem 1rem;
+            }
+        }
+
+        .review-container::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 9%;
+            border-bottom: none;
+            background-color: red;
+            background: url(img/wave-small-reversed.png), center no-repeat;
+            background-size: cover;
+            top: -2%;
+            left: 0%;
+            z-index: 30;
+        }
+    }

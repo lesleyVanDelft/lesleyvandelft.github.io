@@ -1,0 +1,487 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  border-bottom: 1px solid rgba(248, 246, 246, 0.5);
+}
+
+header .main-message p {
+  font-size: 15rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.container .btn-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.nav-list {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  top: 0;
+  right: -50rem;
+  font-size: 1.5rem;
+  background-color: #0b0164;
+  height: 100%;
+  width: 50%;
+  color: white;
+  padding-top: 2rem;
+  -webkit-transition: 650ms ease-in-out;
+  transition: 650ms ease-in-out;
+  z-index: 99;
+  font-weight: bold;
+}
+
+.nav-list .fa-star {
+  font-size: 5rem;
+  color: gold;
+}
+
+.nav-list .nav-link {
+  z-index: 1001;
+}
+
+.nav-list .nav-item {
+  margin-top: 4rem;
+  text-transform: uppercase;
+}
+
+.nav-list .close {
+  position: absolute;
+  top: 2%;
+  right: 12%;
+  font-size: 2.1rem;
+}
+
+.nav-list.active {
+  right: 0;
+  z-index: 100;
+  opacity: 0.9;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+nav .nav-logo {
+  font-size: 3rem;
+  color: white;
+}
+
+nav .nav-logo i {
+  margin-top: 1rem;
+  color: #00eeff;
+  margin-top: 1rem;
+  margin-left: .3rem;
+  cursor: pointer;
+}
+
+nav .nav-logo .nav-logo-text {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+
+nav .nav-logo .nav-logo-text h5 {
+  background-clip: text;
+}
+
+nav .open {
+  position: absolute;
+  top: 26.2%;
+  right: 0.2%;
+}
+
+nav .open i {
+  font-size: 2.3rem;
+  color: white;
+}
+
+nav .open i:active {
+  color: #9a64ff;
+}
+
+.hero {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero .hero-container {
+  min-height: 90vh;
+  border-bottom: none;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  background: #571aff;
+  background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 0%, rgba(94, 89, 145, 0.01) 100%), url("img/stars.jpg");
+  background-position: center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+}
+
+.hero .hero-container a {
+  color: white;
+}
+
+.hero .hero-container .main-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .hero-container .main-message h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: .5px .5px black;
+  font-size: 2.5rem;
+  border-bottom: 1px rgba(211, 117, 211, 0.8);
+}
+
+.hero .hero-container .main-message h3 {
+  font-size: 1.8rem;
+  text-shadow: .5px .5px black;
+  margin-top: 6.5rem;
+  margin-bottom: -.5rem;
+  border-bottom: 2px solid rgba(180, 164, 252, 0.3);
+  padding-bottom: 1rem;
+}
+
+.hero .hero-container .main-message p {
+  margin-top: .8rem;
+}
+
+.hero .hero-container .main-message p:last-of-type {
+  margin-top: 3.4rem;
+  font-weight: bold;
+}
+
+.hero .hero-container .main-message .cta {
+  margin-top: 3rem;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.hero .hero-container .main-message .cta .btn {
+  display: inline-block;
+  padding: 1.4rem 6rem;
+  background-color: rgba(161, 226, 252, 0.6);
+  border-radius: 10px;
+}
+
+.hero .hero-container .main-message .cta .btn:hover {
+  outline: none;
+  border: none;
+  background-color: rgba(87, 169, 201, 0.6);
+  color: white;
+}
+
+.hero .hero-container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  border-bottom: none;
+  background: url(img/wave-small.png), center no-repeat;
+  background-size: cover;
+  left: 0;
+  bottom: -0.3%;
+  z-index: 4;
+}
+
+.space-activities {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.space-activities .space-container {
+  width: 100%;
+  height: 100%;
+}
+
+.space-activities .space-container .title-heading {
+  margin-top: -.5rem;
+  text-align: center;
+}
+
+.space-activities .space-container .title-heading p {
+  margin-bottom: 1.2rem;
+}
+
+.space-activities .space-container .title-heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: -.8rem;
+}
+
+.space-activities .space-container .title-heading h3 {
+  font-size: 1.8rem;
+}
+
+.space-activities .space-container-grid {
+  min-height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 8.5px;
+}
+
+.space-activities .activities-grid-item {
+  background: #571aff;
+  background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 30%, rgba(94, 89, 145, 0.01) 100%), url("img/stars.jpg");
+  text-align: center;
+}
+
+.space-activities .activities-grid-item h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-top: .5rem;
+}
+
+.space-activities .activities-grid-item p {
+  text-align: center;
+  margin-top: .5rem;
+  padding: 0 2rem 1.6rem 3rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.space-activities .activities-grid-item.star-gazing {
+  background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 30%, rgba(94, 89, 145, 0.01) 100%), url("img/spiralstars.jpg");
+  background-position: center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.space-activities .activities-grid-item.star-gazing i {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  color: #00ffea;
+}
+
+.space-activities .activities-grid-item.aurora-borealis {
+  background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 30%, rgba(94, 89, 145, 0.01) 100%), url("img/aurora.png");
+  background-position: center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.space-activities .activities-grid-item.aurora-borealis i {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  color: #00ffea;
+}
+
+.space-activities .activities-grid-item.aurora-borealis img {
+  position: absolute;
+  max-width: 50%;
+}
+
+.space-activities .activities-grid-item.observatory {
+  background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 30%, rgba(94, 89, 145, 0.01) 100%), url("img/observe.png");
+  background-position: center no-repeat;
+  background-size: cover;
+}
+
+.space-activities .activities-grid-item.observatory i {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  color: #00ffea;
+}
+
+.space-activities .activities-grid-item.night-hiking {
+  background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 30%, rgba(94, 89, 145, 0.01) 100%), url("img/hiking.png");
+  background-position: center no-repeat;
+  background-size: cover;
+}
+
+.space-activities .activities-grid-item.night-hiking i {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  color: #00ffea;
+}
+
+.user-review {
+  width: 100%;
+  height: 70%;
+  position: relative;
+}
+
+.user-review .button-top {
+  position: fixed;
+  z-index: 70;
+  bottom: 4%;
+  right: 3%;
+  border: none;
+  outline: none;
+  z-index: 45;
+  -webkit-transition: 650ms ease-in-out;
+  transition: 650ms ease-in-out;
+}
+
+.user-review .button-top i {
+  color: #00cccc;
+}
+
+.user-review .button-top i:hover {
+  cursor: pointer;
+}
+
+.user-review .button-top::before {
+  content: '';
+  width: 10%;
+  height: 5%;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 2%;
+  bottom: 4%;
+  z-index: 30;
+}
+
+.user-review .review-container {
+  min-height: 100%;
+  min-width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 30%, rgba(94, 89, 145, 0.01) 100%), url("img/hiking.png");
+  background-position: center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.user-review .review-container .review-stars {
+  position: absolute;
+  bottom: 11%;
+  left: 36%;
+}
+
+.user-review .review-container .review-stars i {
+  font-size: 1.3rem;
+  color: #ffbb00;
+}
+
+.user-review .review-container .user-pic {
+  margin-top: 1rem;
+}
+
+.user-review .review-container .user-pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+.user-review i {
+  margin-top: 5rem;
+  font-size: 3rem;
+  color: rgba(36, 47, 197, 0.541);
+}
+
+.user-review .user-quote p {
+  padding: 1rem 1rem 1rem;
+}
+
+.user-review .review-container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  border-bottom: none;
+  background-color: red;
+  background: url(img/wave-small-reversed.png), center no-repeat;
+  background-size: cover;
+  top: -2%;
+  left: 0%;
+  z-index: 30;
+}
+/*# sourceMappingURL=style.css.map */
