@@ -14,9 +14,6 @@ html{
 
 body{
     height: 100%;
-    background-color:#fff;
-
-    
 }
 
 a{
@@ -59,7 +56,7 @@ header{
 
 .container{
     width: 100%;
-    max-width: 100rem;
+    // max-width: 100rem;
     margin: 0 auto;
     padding: 0 1.5rem;
     position: relative;
@@ -105,6 +102,7 @@ header{
     }
 
     .close{
+        cursor: pointer;
         position: absolute;
         top: 2%;
         right: 12%;
@@ -134,10 +132,20 @@ nav{
     justify-content: space-between;
     position: relative;
     // background-color: rgb(162, 0, 255);
+    .nav-header{
+        h3 {
+            font-size: 72px;
+            background: -webkit-linear-gradient(60deg, rgb(0, 247, 255), rgb(255, 0, 0));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255,0.7);
+          }
     
     .nav-logo{
         font-size: 3rem;
         color: white;
+       }
+
         i{
             margin-top: 1rem;
             color: rgb(0, 238, 255);
@@ -160,9 +168,11 @@ nav{
     }
 
     .open{
+        cursor: pointer;
         position: absolute;
         top: 26.2%;
         right: 0.2%;
+        transition: 300ms ease-in-out;
         i{
             font-size: 2.3rem;
             color: white;
@@ -170,6 +180,10 @@ nav{
 
         i:active{
             color: rgb(154, 100, 255);
+        }
+
+        i:hover{
+            color:rgb(178, 169, 194)
         }
     }
 
@@ -211,7 +225,7 @@ nav{
             flex-direction: column;
             
             h1{
-                margin-top: 1.5rem;
+                margin-top: 5.5rem;
                 margin-bottom: 1.5rem;
                 text-shadow: .5px .5px black;
                 
@@ -236,36 +250,7 @@ nav{
             p:last-of-type{
                 margin-top: 3.4rem;
                 font-weight: bold;
-            }
-
-            .cta{
-                margin-top: 3rem;
-                font-size: 2rem;
-                position: absolute;
-                bottom: 100px;
-                left: 50px;
-                cursor: pointer;
-                
-                .btn{
-                    display: inline-block;
-                    padding: 1.4rem 6rem;
-                    background-color: rgba(161, 226, 252, 0.6); 
-                    // (211, 117, 211, .8)
-                    border-radius: 10px;
-                    
-                }
-
-                .btn:hover{
-                    outline: none;
-                    border: none;
-                    // background-color: rgb(167, 96, 167);
-                    // background-color: rgba(107, 207, 247, 0.8);
-                    background-color: rgba(87, 169, 201, 0.6);
-                    color: white;
-                }
-            }
-
-            
+            } 
         }
     }
 
@@ -317,19 +302,6 @@ nav{
 
     }
 
-    // .space-container-grid::before{
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 10%;
-    //     border-bottom: none;
-    //     background: url(img/wave-small-reversed.png), center no-repeat;
-    //     background-size: cover;
-    //     left: 0;
-    //     bottom: -0.3%;
-    //     z-index: 4;
-    // }
-
     .space-container-grid{
         min-height: 100%;
         width: 100%;
@@ -337,21 +309,6 @@ nav{
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         grid-gap: 8.5px;
     }
-
-    // .activities-grid-item::before{
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 10%;
-    //     border-bottom: none;
-    //     background: url(img/wave-small-reversed.png), center no-repeat;
-    //     background-size: cover;
-        
-    //     left: 0;
-    //     bottom: 0;
-        
-    //     z-index: 4;
-    // }
     
     .activities-grid-item{
         background: rgb(87,26,255);
@@ -436,9 +393,6 @@ nav{
                 color: rgb(0, 255, 234);
             }
         }
-
-        
-
     }
 }
 
@@ -548,3 +502,375 @@ nav{
             z-index: 30;
         }
     }
+
+
+    // MEDIA QUERIES // // MEDIA QUERIES // // MEDIA QUERIES // // MEDIA QUERIES // // MEDIA QUERIES // // MEDIA QUERIES // // MEDIA QUERIES // // MEDIA QUERIES // 
+
+    /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    header{
+        width: 100%;
+        height: 10rem;
+        background: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 70;
+        border-bottom: 1px solid rgba(248, 246, 246, 0.5);
+        display: flex;
+        align-items: center;
+    
+        .main-message{
+            p{
+                font-size: 15rem;
+            }
+        }
+    }
+
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10.5rem;
+        position: relative;
+
+        .btn-top{
+            position: fixed;
+            bottom:0;
+            right:0;
+        }
+    }
+
+    .nav-list{
+        right: -100rem;
+        font-size: 3.5rem;
+        width: 25%;
+        
+        .nav-item{
+            margin-top: 10rem;
+        }
+    
+        
+    }
+    
+    .nav-list.active{
+       right: 0;
+       z-index: 100;
+       opacity: 0.9;
+        // transition: 650ms ease-in-out;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        // background-color: rgb(162, 0, 255);
+        
+        .nav-header{
+            color: white;
+
+            h3{
+                font-size: 5rem;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+        }
+        .close{
+            i{
+                font-size: 4rem;
+            }
+        }
+
+        .open{
+            position: absolute;
+            top: 26.2%;
+            right: 0.2%;
+
+            i{
+                font-size: 3rem;
+            }
+        }
+
+       .open:hover{
+           i{
+                color: rgb(154, 100, 255);
+           }
+       }
+        
+        .nav-logo{
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            color: white;
+            i{
+                margin-top: 1rem;
+                margin-right: 1.5rem;
+                color: rgb(0, 238, 255);
+                margin-top: 1rem;
+                margin-left: 3rem;
+                cursor: pointer;
+            }
+    
+            .nav-logo-text{
+                position: absolute;
+                top: 15%;
+                left: 15%;
+                
+                h5{
+                    // background-color: #abe9cd;
+                    // background: linear-gradient(315deg, #abe9cd , #3eadcf);
+                    background-clip: text;
+                }
+            }
+        }
+  }
+
+  .hero{
+    min-height: 80vh;
+    width: 100%;
+    
+    .hero-container{
+        min-height: 90vh;
+        width: 100%;
+        background: rgb(87,26,255);
+        background: linear-gradient(50deg, rgba(87,26,255,0.9) 0%, rgba(94,89,145,0.01) 100%), url("img/stars-large.jpg");
+        background-position: center no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .main-message{
+            margin-bottom: 3rem;
+            
+            h1{
+                margin-bottom: 4rem;
+                text-shadow: .5px .5px black;
+                font-size: 7.5rem;
+                border-bottom: 1px  rgba(211, 117, 211, .8);
+            }
+
+            p{
+                max-width: 50vw;
+                font-size: 1.8rem;
+            }
+
+            p:last-of-type{
+                margin-top: 3.4rem;
+                margin-bottom: -4rem;
+                font-weight: bold;
+            }
+
+            button{
+                max-width: 20vw;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 3rem;
+                padding: 2.5rem 10rem;
+                margin-top: 12rem;
+                background-color: rgba(0, 162, 255, 0.6);
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                transition: 300ms ease-in-out;
+
+                a{
+                    color: white;
+                    font-size: 3rem;
+                }
+            }
+            button:hover{
+                background-color: rgba(0, 162, 255, 0.9);
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .hero-container::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 18%;
+        background: url(img/wave-large.png), center no-repeat;
+        background-size: cover;
+    }
+}
+
+.space-activities{
+    min-height:70%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .read-review{
+        // display: flex;
+        // flex-direction: column;
+        margin-top: 15rem;
+
+        
+    }
+
+    .space-container{
+
+        .title-heading{
+            h3{
+                font-size: 4rem;
+            }
+            h1{
+                font-size: 5rem;
+            }
+            p{
+                font-size: 2rem;
+                margin-top: 5rem;
+                margin-bottom: .9rem;
+            }
+        }
+
+        .space-container-grid{
+            grid-template-rows: repeat(auto-fit, minmax(55rem, 1fr));
+            grid-gap: 15px;
+
+            h1{
+                font-size: 3rem;
+            }
+
+            .activities-grid-item{
+                margin-top: 5rem;
+                box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.35);
+                h1{
+                    font-size: 3.8rem;
+                }
+                p{
+                    margin-top: 1rem;
+                    font-size: 2rem;
+                }
+
+                i{
+                    font-size: 5rem;
+                    margin-top: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                button{
+                    cursor: pointer;
+                    margin-top: 3rem;
+                    padding: 1.5rem 3.5rem;
+                    border: none;
+                    outline:none;
+                    background-color: rgba(0, 255, 234, 0.7);
+                    border-radius: 20px;
+                    font-size: 2rem;
+                    transition: 200ms ease-in-out;
+                    a{
+                        color: #fff;
+                    }
+                }
+
+                button:hover{
+                    background-color: rgba(0, 255, 234, 1);
+                    transform: translateY(-3px);
+                    box-shadow: 0px 15px 21px 0px rgba(0, 0, 0, 0.295);
+                    a{
+                        color: black;
+
+                    }
+                }
+
+                button:active{
+                    background-color: rgb(0, 185, 170);
+                    transform: translateY(-3px);
+                    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.295);
+
+                }
+            }
+        }
+    }
+}
+
+.user-review::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 37%;
+    border-bottom: none;
+    background-color: red;
+    background: url(img/wave-large-reversed.png), center no-repeat;
+    background-size: cover;
+    top: -15%;
+    left: 0%;
+    z-index: 30;
+}
+
+.user-review{
+    min-height: 80vh;
+    margin-top: 15rem;
+    display: relative;
+    z-index: 1;
+    // .review-container{
+    //     display: flex;
+    // }
+}
+
+
+}
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    //CSS
+    
+  }

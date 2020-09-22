@@ -15,7 +15,6 @@ html {
 
 body {
   height: 100%;
-  background-color: #fff;
 }
 
 a {
@@ -53,7 +52,6 @@ header .main-message p {
 
 .container {
   width: 100%;
-  max-width: 100rem;
   margin: 0 auto;
   padding: 0 1.5rem;
   position: relative;
@@ -107,6 +105,7 @@ header .main-message p {
 }
 
 .nav-list .close {
+  cursor: pointer;
   position: absolute;
   top: 2%;
   right: 12%;
@@ -132,12 +131,20 @@ nav {
   position: relative;
 }
 
-nav .nav-logo {
+nav .nav-header h3 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(60deg, #00f7ff, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+}
+
+nav .nav-header .nav-logo {
   font-size: 3rem;
   color: white;
 }
 
-nav .nav-logo i {
+nav .nav-header i {
   margin-top: 1rem;
   color: #00eeff;
   margin-top: 1rem;
@@ -145,20 +152,23 @@ nav .nav-logo i {
   cursor: pointer;
 }
 
-nav .nav-logo .nav-logo-text {
+nav .nav-header .nav-logo-text {
   position: absolute;
   top: 15%;
   left: 15%;
 }
 
-nav .nav-logo .nav-logo-text h5 {
+nav .nav-header .nav-logo-text h5 {
   background-clip: text;
 }
 
 nav .open {
+  cursor: pointer;
   position: absolute;
   top: 26.2%;
   right: 0.2%;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 nav .open i {
@@ -168,6 +178,10 @@ nav .open i {
 
 nav .open i:active {
   color: #9a64ff;
+}
+
+nav .open i:hover {
+  color: #b2a9c2;
 }
 
 .hero {
@@ -206,7 +220,7 @@ nav .open i:active {
 }
 
 .hero .hero-container .main-message h1 {
-  margin-top: 1.5rem;
+  margin-top: 5.5rem;
   margin-bottom: 1.5rem;
   text-shadow: .5px .5px black;
   font-size: 2.5rem;
@@ -229,29 +243,6 @@ nav .open i:active {
 .hero .hero-container .main-message p:last-of-type {
   margin-top: 3.4rem;
   font-weight: bold;
-}
-
-.hero .hero-container .main-message .cta {
-  margin-top: 3rem;
-  font-size: 2rem;
-  position: absolute;
-  bottom: 100px;
-  left: 50px;
-  cursor: pointer;
-}
-
-.hero .hero-container .main-message .cta .btn {
-  display: inline-block;
-  padding: 1.4rem 6rem;
-  background-color: rgba(161, 226, 252, 0.6);
-  border-radius: 10px;
-}
-
-.hero .hero-container .main-message .cta .btn:hover {
-  outline: none;
-  border: none;
-  background-color: rgba(87, 169, 201, 0.6);
-  color: white;
 }
 
 .hero .hero-container::before {
@@ -484,4 +475,309 @@ nav .open i:active {
   left: 0%;
   z-index: 30;
 }
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+  header {
+    width: 100%;
+    height: 10rem;
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    border-bottom: 1px solid rgba(248, 246, 246, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .main-message p {
+    font-size: 15rem;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10.5rem;
+    position: relative;
+  }
+  .container .btn-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  .nav-list {
+    right: -100rem;
+    font-size: 3.5rem;
+    width: 25%;
+  }
+  .nav-list .nav-item {
+    margin-top: 10rem;
+  }
+  .nav-list.active {
+    right: 0;
+    z-index: 100;
+    opacity: 0.9;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  nav .nav-header {
+    color: white;
+  }
+  nav .nav-header h3 {
+    font-size: 5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
+  }
+  nav .close i {
+    font-size: 4rem;
+  }
+  nav .open {
+    position: absolute;
+    top: 26.2%;
+    right: 0.2%;
+  }
+  nav .open i {
+    font-size: 3rem;
+  }
+  nav .open:hover i {
+    color: #9a64ff;
+  }
+  nav .nav-logo {
+    font-size: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+  }
+  nav .nav-logo i {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    color: #00eeff;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    cursor: pointer;
+  }
+  nav .nav-logo .nav-logo-text {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+  }
+  nav .nav-logo .nav-logo-text h5 {
+    background-clip: text;
+  }
+  .hero {
+    min-height: 80vh;
+    width: 100%;
+  }
+  .hero .hero-container {
+    min-height: 90vh;
+    width: 100%;
+    background: #571aff;
+    background: linear-gradient(50deg, rgba(87, 26, 255, 0.9) 0%, rgba(94, 89, 145, 0.01) 100%), url("img/stars-large.jpg");
+    background-position: center no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero .hero-container .main-message {
+    margin-bottom: 3rem;
+  }
+  .hero .hero-container .main-message h1 {
+    margin-bottom: 4rem;
+    text-shadow: .5px .5px black;
+    font-size: 7.5rem;
+    border-bottom: 1px rgba(211, 117, 211, 0.8);
+  }
+  .hero .hero-container .main-message p {
+    max-width: 50vw;
+    font-size: 1.8rem;
+  }
+  .hero .hero-container .main-message p:last-of-type {
+    margin-top: 3.4rem;
+    margin-bottom: -4rem;
+    font-weight: bold;
+  }
+  .hero .hero-container .main-message button {
+    max-width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    padding: 2.5rem 10rem;
+    margin-top: 12rem;
+    background-color: rgba(0, 162, 255, 0.6);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+  }
+  .hero .hero-container .main-message button a {
+    color: white;
+    font-size: 3rem;
+  }
+  .hero .hero-container .main-message button:hover {
+    background-color: rgba(0, 162, 255, 0.9);
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  .hero .hero-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 18%;
+    background: url(img/wave-large.png), center no-repeat;
+    background-size: cover;
+  }
+  .space-activities {
+    min-height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .space-activities .read-review {
+    margin-top: 15rem;
+  }
+  .space-activities .space-container .title-heading h3 {
+    font-size: 4rem;
+  }
+  .space-activities .space-container .title-heading h1 {
+    font-size: 5rem;
+  }
+  .space-activities .space-container .title-heading p {
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: .9rem;
+  }
+  .space-activities .space-container .space-container-grid {
+    -ms-grid-rows: (minmax(55rem, 1fr))[auto-fit];
+        grid-template-rows: repeat(auto-fit, minmax(55rem, 1fr));
+    grid-gap: 15px;
+  }
+  .space-activities .space-container .space-container-grid h1 {
+    font-size: 3rem;
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item {
+    margin-top: 5rem;
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item h1 {
+    font-size: 3.8rem;
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item p {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item i {
+    font-size: 5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item button {
+    cursor: pointer;
+    margin-top: 3rem;
+    padding: 1.5rem 3.5rem;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 255, 234, 0.7);
+    border-radius: 20px;
+    font-size: 2rem;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item button a {
+    color: #fff;
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item button:hover {
+    background-color: #00ffea;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0px 15px 21px 0px rgba(0, 0, 0, 0.295);
+            box-shadow: 0px 15px 21px 0px rgba(0, 0, 0, 0.295);
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item button:hover a {
+    color: black;
+  }
+  .space-activities .space-container .space-container-grid .activities-grid-item button:active {
+    background-color: #00b9aa;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.295);
+            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.295);
+  }
+  .user-review::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 37%;
+    border-bottom: none;
+    background-color: red;
+    background: url(img/wave-large-reversed.png), center no-repeat;
+    background-size: cover;
+    top: -15%;
+    left: 0%;
+    z-index: 30;
+  }
+  .user-review {
+    min-height: 80vh;
+    margin-top: 15rem;
+    display: relative;
+    z-index: 1;
+  }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
 /*# sourceMappingURL=style.css.map */
